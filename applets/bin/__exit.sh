@@ -6,6 +6,7 @@ if pgrep -x "Hyprland" >/dev/null; then
 	#notify-send "Hyperland"
 	echo "Hyperland"
 	loginctl kill-session "$XDG_SESSION_ID"
+	# this is imperfect. It will causes tmux problems
 	if false; then
 		uwsm stop # cause crash
 		hyprctl dispatch exit
